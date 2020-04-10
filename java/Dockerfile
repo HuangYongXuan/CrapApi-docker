@@ -11,8 +11,8 @@ RUN rm -rf /etc/yum.repos.d/* && \
     rm -rf /etc/maven/settings.xml && \
     mv /home/settings.xml /etc/maven/
 
-RUN mkdir /home/git/ && cd /home/git/ && git clone https://github.com/EhsanTang/ApiManager.git && \
-    cd /home/git/ApiManager/api/ && \
-    mvn clean package
+RUN mkdir /home/git/ && cd /home/git/ && git clone https://gitee.com/CrapApi/CrapApi.git
+
+RUN cd /home/git/CrapApi && mvn -f ./api/pom.xml compile
 
 EXPOSE 8080

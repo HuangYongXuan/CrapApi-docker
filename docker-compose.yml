@@ -1,0 +1,9 @@
+version: '1'
+services:
+  crap-java:
+    build: java/Dockerfile
+    ports:
+    - "8080:8080"
+  mariadb:
+    image: mariadb
+
